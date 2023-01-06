@@ -12,7 +12,7 @@ const aProducts = [
     img: "/img/img.png",
     price: 12.0,
     quantity: 0,
-    titleSize: 20,
+    titleSize: 40,
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const aProducts = [
     img: "/img/img.png",
     price: 12.0,
     quantity: 0,
-    titleSize: 10,
+    titleSize: 40,
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const aProducts = [
     img: "/img/img.png",
     price: 12.0,
     quantity: 0,
-    titleSize: 10,
+    titleSize: 40,
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const aProducts = [
     img: "/img/img.png",
     price: 12.0,
     quantity: 0,
-    titleSize: 10,
+    titleSize: 40,
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const aProducts = [
     img: "/img/img.png",
     price: 12.0,
     quantity: 0,
-    titleSize: 10,
+    titleSize: 40,
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const aProducts = [
     img: "/img/img.png",
     price: 12.0,
     quantity: 0,
-    titleSize: 10,
+    titleSize: 40,
   },
 ];
 
