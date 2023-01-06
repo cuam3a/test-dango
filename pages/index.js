@@ -137,7 +137,7 @@ export default function Home() {
           {products &&
             products.map((item) => {
               return (
-                <div className="flex w-80 border m-2">
+                <div className="flex w-80 border m-2" key={item.id}>
                   <Product
                     data={item}
                     handleChangeQuantity={handleChangeQuantity}
