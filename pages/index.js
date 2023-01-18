@@ -112,7 +112,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-full">
+      <main className="max-w-screen-2xl">
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3 text-white">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-center md:justify-between">
             <div className="w-full relative flex justify-center lg:w-auto lg:static lg:block lg:justify-start">
@@ -132,12 +132,11 @@ export default function Home() {
             </div>
           </div>
         </nav>
-        <div className="ml-2 md:ml-20">
-        <div className="flex flex-wrap">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-1 justify-center">
           {products &&
             products.map((item) => {
               return (
-                <div className="flex w-80 border m-2" key={item.id}>
+                <div className="w-80 border mx-auto my-2" key={item.id}>
                   <Product
                     data={item}
                     handleChangeQuantity={handleChangeQuantity}
@@ -148,7 +147,6 @@ export default function Home() {
                 </div>
               );
             })}
-        </div>
         </div>
       </main>
     </>
