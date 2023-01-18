@@ -37,7 +37,7 @@ const Product = ({ data, handleChangeQuantity, handleChangeTitle, handleChangeTi
                 for="titleSize"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Title size
+                Title size {data.titleSize} px
               </label>
               <input
                 id="titleSize"
@@ -55,13 +55,13 @@ const Product = ({ data, handleChangeQuantity, handleChangeTitle, handleChangeTi
         <></>
       )}
       <div className="flex justify-center mt-2">
-        <img src={data.img} responsive className="object-cover h-38 w-64" />
+        <img src={data.img} responsive className="object-cover h-38 w-64 border rounded-md" />
       </div>
       <div
         className="flex justify-start mt-2"
         style={{ fontSize: data.titleSize + "px" }}
       >
-        {data.title}
+        {data.title} 
       </div>
       <div className="flex flex-row justify-start items-center mt-8">
         <div className="mr-5 font-bold">$ {data.price.toFixed(2)}</div>
