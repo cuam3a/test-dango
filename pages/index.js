@@ -112,7 +112,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="max-w-screen-2xl">
+      <main className="w-full">
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3 text-white">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-center md:justify-between flex-col md:flex-row">
             <div className="w-full md:w-1/2 relative flex justify-center md:justify-start md:static md:block">
@@ -136,7 +136,7 @@ export default function Home() {
           {products &&
             products.map((item) => {
               return (
-                <div className="w-80 border mx-auto my-2" key={item.id}>
+                <div className="w-70 max-w-md border mx-auto my-2" key={item.id}>
                   <Product
                     data={item}
                     handleChangeQuantity={handleChangeQuantity}
