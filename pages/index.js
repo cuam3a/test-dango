@@ -98,7 +98,7 @@ export default function Home() {
   const handleAddCart = (id) => {
     let product = products.find((ele) => ele.id === id);
     if (product) {
-      setCart([...cart, Object.assign({},product)]);
+      setCart([...cart, Object.assign({}, product)]);
       product.quantity = 0;
       setProducts([...products]);
     }
@@ -112,41 +112,55 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-full">
+      <main className="w-full justify-center">
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3 text-white">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-center md:justify-between flex-col md:flex-row">
             <div className="w-full md:w-1/2 relative flex justify-center md:justify-start md:static md:block">
               TEST DANGO DIGITAL
             </div>
             <div className="flex flex-row justify-center md:justify-end items-center w-full md:w-1/2">
-              {
-                cart.length > 0 
-                ? 
-                  <>
-                    <AiFillShopping />
-                    <label className="ml-2">ITEMS: { cart.reduce((a, b) => { return a + b.quantity; }, 0) }</label>
-                    <label className="ml-2">TOTAL: ${ cart.reduce((a, b) => { return a + (b.price * b.quantity); }, 0) }</label>
-                  </>
-                : <></>
-              }
+              {cart.length > 0 ? (
+                <>
+                  <AiFillShopping />
+                  <label className="ml-2">
+                    ITEMS:{" "}
+                    {cart.reduce((a, b) => {
+                      return a + b.quantity;
+                    }, 0)}
+                  </label>
+                  <label className="ml-2">
+                    TOTAL: $
+                    {cart.reduce((a, b) => {
+                      return a + b.price * b.quantity;
+                    }, 0)}
+                  </label>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
           </div>
         </nav>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-1 justify-center">
-          {products &&
-            products.map((item) => {
-              return (
-                <div className="w-70 max-w-md border mx-auto my-2" key={item.id}>
-                  <Product
-                    data={item}
-                    handleChangeQuantity={handleChangeQuantity}
-                    handleChangeTitle={handleChangeTitle}
-                    handleChangeTitleSize={handleChangeTitleSize}
-                    handleAddCart={handleAddCart}
-                  />
-                </div>
-              );
-            })}
+        <div className="mx-auto max-w-screen-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-1 justify-center">
+            {products &&
+              products.map((item) => {
+                return (
+                  <div
+                    className="w-70 max-w-md border mx-auto my-2"
+                    key={item.id}
+                  >
+                    <Product
+                      data={item}
+                      handleChangeQuantity={handleChangeQuantity}
+                      handleChangeTitle={handleChangeTitle}
+                      handleChangeTitleSize={handleChangeTitleSize}
+                      handleAddCart={handleAddCart}
+                    />
+                  </div>
+                );
+              })}
+          </div>
         </div>
       </main>
     </>
