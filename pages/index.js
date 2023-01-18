@@ -115,18 +115,18 @@ export default function Home() {
       <main className="max-w-screen-2xl">
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3 text-white">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-center md:justify-between">
-            <div className="w-full relative flex justify-center lg:w-auto lg:static lg:block lg:justify-start">
+            <div className="w-1/2 relative flex justify-center lg:w-auto lg:static lg:block lg:justify-start">
               TEST DANGO DIGITAL
             </div>
-            <div>
+            <div className="flex flex-row justify-end items-center w-1/2">
               {
                 cart.length > 0 
                 ? 
-                  <div className="flex flex-row justify-center items-center">
+                  <>
                     <AiFillShopping />
                     <label className="ml-2">ITEMS: { cart.reduce((a, b) => { return a + b.quantity; }, 0) }</label>
                     <label className="ml-2">TOTAL: ${ cart.reduce((a, b) => { return a + (b.price * b.quantity); }, 0) }</label>
-                    </div>
+                  </>
                 : <></>
               }
             </div>
