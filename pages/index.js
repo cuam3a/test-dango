@@ -114,11 +114,11 @@ export default function Home() {
       </Head>
       <main className="max-w-screen-2xl">
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3 text-white">
-          <div className="container px-4 mx-auto flex flex-wrap items-center justify-center md:justify-between">
-            <div className="w-1/2 relative flex justify-center lg:w-auto lg:static lg:block lg:justify-start">
+          <div className="container px-4 mx-auto flex flex-wrap items-center justify-center md:justify-between flex-col md:flex-row">
+            <div className="w-full md:w-1/2 relative flex justify-center md:justify-start md:static md:block">
               TEST DANGO DIGITAL
             </div>
-            <div className="flex flex-row justify-end items-center w-1/2">
+            <div className="flex flex-row justify-center md:justify-end items-center w-full md:w-1/2">
               {
                 cart.length > 0 
                 ? 
